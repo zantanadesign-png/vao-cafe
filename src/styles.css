@@ -198,7 +198,7 @@
   .hero { display: block; min-height: 0; height: auto; }
   .hero-text { min-height: 530px; padding: 151px 20px 64px; display: block; }
   .hero-copy .eyebrow { font-size: 8px; margin-bottom: 22px; }
-  .hero h1 { font-size: 48px; line-height: 1.17; margin-bottom: 37px; }
+  .hero h1 { font-size: 44px; line-height: 1.17; margin-bottom: 37px; }
   .hero-copy .vao-button { float: right; height: 49px; min-width: 148px; font-size: 23px; }
   .hero-bottom-note { display: none; }
   .hero-slideshow { height: 460px; }

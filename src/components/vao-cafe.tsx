@@ -11,7 +11,7 @@ import breakfast from "@/assets/vao-breakfast.jpg";
 const heroImages = [interior, breakfast, coffee, pastry];
 const imageDescriptions = ["Sunlight falling across VAO's café tables", "Avocado toast and a poached egg in afternoon light", "A carefully poured cappuccino", "A freshly baked cinnamon roll"];
 
-export function PrimaryButton({ children, href, dark = false, onClick }: { children: ReactNode; href?: string; dark?: boolean; onClick?: () => void }) {
+export function PrimaryButton({ children, href, dark = false, onClick }: { children: ReactNode; href?: string | undefined; dark?: boolean; onClick?: () => void }) {
   return <Button variant={dark ? "coffee" : "cream"} asChild={Boolean(href)} onClick={onClick}>{href ? <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined}>{children}</a> : children}</Button>;
 }
 
