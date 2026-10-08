@@ -121,7 +121,7 @@
 .menu-section { position: relative; padding: 90px 24px; display: grid; place-items: center; }
 .section-background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .menu-section::after { content: ''; position: absolute; inset: 0; background: oklch(from var(--foreground) l c h / 14%); }
-.menu-panel { position: relative; z-index: 1; width: min(100%,640px); padding: 40px 65px 48px; background: var(--card); text-align: center; }
+.menu-panel { position: relative; z-index: 1; width: min(100%,1120px); padding: 40px 48px 48px; background: var(--card); text-align: center; }
 .menu-monogram { display: block; font-family: var(--font-editorial); font-size: 29px; color: var(--primary); margin-bottom: 17px; }
 .menu-monogram span { display: inline-block; font-size: 35px; }
 .menu-panel .eyebrow { color: var(--muted-foreground); }
@@ -136,9 +136,12 @@
 .menu-items.expanded { grid-template-rows: 1fr; }
 .menu-items > div { overflow: hidden; visibility: hidden; }
 .menu-items.expanded > div { visibility: visible; }
-.menu-item { margin-bottom: 23px; }
-.menu-item h3 { font-size: 11px; text-transform: uppercase; font-weight: 600; margin-bottom: 5px; }
-.menu-item p { font-size: 14px; line-height: 1.65; }
+.menu-product-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 32px 20px; padding: 8px 0 30px; }
+.menu-item { min-width: 0; }
+.menu-product-photo { width: 100%; aspect-ratio: 1; height: auto; object-fit: cover; border-radius: 4px; }
+.menu-product-copy { padding: 18px 2px 0; }
+.menu-item h3 { font-size: 11px; line-height: 1.5; text-transform: uppercase; font-weight: 500; margin-bottom: 20px; overflow-wrap: anywhere; }
+.menu-item p { font-size: 12px; line-height: 1.7; color: var(--muted-foreground); }
 .visit-section { position: relative; min-height: 870px; padding: 90px 7%; display: flex; align-items: center; }
 .visit-card { position: relative; z-index: 1; width: min(650px,62%); border-radius: 8px; padding: 44px 48px; background: var(--olive); color: var(--primary-foreground); }
 .visit-card h2 { font-size: 60px; line-height: 1.05; margin: 20px 0 35px; }
@@ -222,13 +225,15 @@
   .gallery-copy .tiny-label { font-size: 8px; }
   .gallery-copy p { font-size: 14px; line-height: 1.6; margin-top: 12px; }
   .menu-section { padding: 52px 20px; }
-  .menu-panel { padding: 28px 24px 34px; }
+  .menu-panel { padding: 28px 16px 34px; }
   .menu-monogram { margin-bottom: 15px; }
   .menu-panel h2 { font-size: 48px; margin-bottom: 23px; }
   .menu-panel .eyebrow { font-size: 8px; }
   .vao-editorial-control { font-size: 25px; height: 61px; }
-  .menu-item p { font-size: 13px; }
-  .menu-item { margin-bottom: 22px; }
+  .menu-product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 26px 12px; padding-bottom: 26px; }
+  .menu-product-copy { padding-top: 14px; }
+  .menu-item h3 { font-size: 10px; margin-bottom: 14px; }
+  .menu-item p { font-size: 11px; line-height: 1.65; }
   .visit-section { padding: 150px 20px 100px; min-height: 0; display: block; }
   .visit-card { width: 100%; padding: 29px 25px 32px; }
   .visit-card h2 { font-size: 43px; margin: 20px 0 34px; }

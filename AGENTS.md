@@ -11,5 +11,6 @@
 
 - Keep VAO's public experience as one scrolling index page with section-anchor navigation, because the supplied brief defines one continuous editorial composition.
 - Centralize verified business values and external destinations in the café configuration; missing destinations open an honest availability dialog rather than invented URLs.
+- Keep each menu product's bundled photograph with its description in the café configuration, so all accordion categories use the same presentation.
 - Keep reusable café presentation and motion in the café component module, with all visual styling in the global semantic design system.
 - Use bundled original editorial photographs and respect reduced motion for automatic and scroll-triggered animations.
