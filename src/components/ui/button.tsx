@@ -9,6 +9,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        cream: "vao-button vao-button-cream",
+        coffee: "vao-button vao-button-coffee",
+        circleCream: "vao-circle vao-circle-cream",
+        circleCoffee: "vao-circle vao-circle-coffee",
+        editorial: "vao-editorial-control",
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
