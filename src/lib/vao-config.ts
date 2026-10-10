@@ -8,9 +8,6 @@ import batchBrew from "@/assets/vao-menu-batch-brew.jpg";
 import coldBrew from "@/assets/vao-menu-cold-brew.jpg";
 import honeyOatLatte from "@/assets/vao-menu-honey-oat-latte.jpg";
 import espressoTonic from "@/assets/vao-menu-espresso-tonic.jpg";
-import cinnamonRoll from "@/assets/vao-menu-cinnamon-roll.jpg";
-import avocadoToast from "@/assets/vao-menu-avocado-toast.jpg";
-import butterCroissant from "@/assets/vao-menu-butter-croissant.jpg";
 
 // Replace null values with VAO's verified business information before launch.
 export const vaoConfig = {
@@ -18,34 +15,46 @@ export const vaoConfig = {
   ORDER_URL: null as string | null,
   EMAIL: null as string | null,
   PHONE: null as string | null,
-  ADDRESS: null as string | null,
+  ADDRESS: "Al Khabra · Athlo Sports Complex" as string | null,
   MAPS_URL: null as string | null,
-  INSTAGRAM_URL: null as string | null,
+  INSTAGRAM_URL: "https://www.instagram.com/vaocafe.sa/" as string | null,
   studioName: null as string | null,
   studioInstagram: null as string | null,
-  openingHours: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].map(day => ({ day, hours: null as string | null })),
+  openingHours: [
+    { day: "Saturday – Wednesday", hours: "1:00 PM – 12:00 AM" },
+    { day: "Thursday – Friday", hours: "12:30 PM – 2:00 AM" },
+  ],
+  instagramHandle: "@vaocafe.sa",
 };
 
+// Existing editorial photographs are illustrative, not verified product photographs.
 export const menuCategories = [
-  { name: "Espresso Bar", items: [
-    { name: "Americano", image: americano, description: "Double shot thinned with hot water for a clean finish." },
-    { name: "Cappuccino", image: cappuccino, description: "Smooth, creamy, and finished with precise latte art." },
-    { name: "Flat White", image: flatWhite, description: "The gold standard. Velvety micro-foam over a double shot." },
-    { name: "Cortado", image: cortado, description: "Equal parts espresso and silky steamed milk." },
-    { name: "Espresso", image: espresso, description: "Short, intense, and full of character." },
+  { name: "Hot Drinks", items: [
+    { name: "Espresso", price: 10, image: espresso, description: "Short, intense, and full of character." },
+    { name: "Americano", price: 13, image: americano, description: "Espresso with hot water for a clean finish." },
+    { name: "Flat White", price: 16, image: flatWhite, description: "Espresso with velvety micro-foam." },
+    { name: "Cortado", price: 14, image: cortado, description: "Espresso and silky steamed milk." },
+    { name: "Cappuccino", price: 15, image: cappuccino, description: "Smooth, creamy, and finished with latte art." },
+    { name: "Latte", price: 15, image: honeyOatLatte, description: "" },
+    { name: "Spanish Latte", price: 15, image: honeyOatLatte, description: "" },
+    { name: "V60", price: 15, image: pourOver, description: "Slowly brewed, bringing every note into focus." },
+    { name: "Infusion V60", price: 18, image: pourOver, description: "" },
+    { name: "Coffee of the Day", price: 9, image: batchBrew, description: "" },
   ] },
-  { name: "Filter Bar", items: [
-    { name: "Pour Over", image: pourOver, description: "Slowly brewed, bringing every note into focus." },
-    { name: "Batch Brew", image: batchBrew, description: "A carefully selected coffee, freshly brewed throughout the day." },
-    { name: "Cold Brew", image: coldBrew, description: "Steeped slowly. Clean, refreshing, and naturally sweet." },
+  { name: "Cold Drinks", items: [
+    { name: "Americano", price: 14, image: coldBrew, description: "" },
+    { name: "Alfredo", price: 14, image: coldBrew, description: "" },
+    { name: "Alfredo Infusion (Passion Fruit)", price: 18, image: espressoTonic, description: "" },
+    { name: "VAO Signature", price: 18, image: espressoTonic, description: "" },
+    { name: "Latte", price: 16, image: cortado, description: "" },
+    { name: "Spanish Latte", price: 16, image: cortado, description: "" },
+    { name: "V60", price: 17, image: coldBrew, description: "" },
+    { name: "Infusion V60", price: 20, image: coldBrew, description: "" },
+    { name: "Coffee of the Day", price: 10, image: coldBrew, description: "" },
+    { name: "Matcha", price: 19, image: null, description: "" },
+    { name: "Strawberry Matcha", price: 21, image: null, description: "" },
+    { name: "Hibiscus", price: 16, image: null, description: "" },
   ] },
-  { name: "VAO Signatures", items: [
-    { name: "Honey & Oat Latte", image: honeyOatLatte, description: "Espresso, silky oat milk, and a gentle touch of honey." },
-    { name: "Espresso Tonic", image: espressoTonic, description: "Bright espresso over tonic, ice, and a twist of citrus." },
-  ] },
-  { name: "Small Bites", items: [
-    { name: "Cinnamon Roll", image: cinnamonRoll, description: "Soft, golden, and finished with a delicate swirl of icing." },
-    { name: "Avocado Toast", image: avocadoToast, description: "Sourdough, ripe avocado, and a perfectly poached egg." },
-    { name: "Butter Croissant", image: butterCroissant, description: "Flaky layers, baked golden. A little everyday indulgence." },
-  ] },
+  // Bakes have not been supplied: keep the category without inventing products.
+  { name: "Small Bites", items: [] },
 ];
