@@ -8,15 +8,16 @@ import batchBrew from "@/assets/vao-menu-batch-brew.jpg";
 import coldBrew from "@/assets/vao-menu-cold-brew.jpg";
 import honeyOatLatte from "@/assets/vao-menu-honey-oat-latte.jpg";
 import espressoTonic from "@/assets/vao-menu-espresso-tonic.jpg";
+import butterCroissant from "@/assets/vao-menu-butter-croissant.jpg";
+import cinnamonRoll from "@/assets/vao-menu-cinnamon-roll.jpg";
+import avocadoToast from "@/assets/vao-menu-avocado-toast.jpg";
 
 // Replace null values with VAO's verified business information before launch.
 export const vaoConfig = {
   brandName: "VAO",
   ORDER_URL: null as string | null,
   EMAIL: null as string | null,
-  PHONE: null as string | null,
   ADDRESS: "Al Khabra · Athlo Sports Complex" as string | null,
-  MAPS_URL: null as string | null,
   INSTAGRAM_URL: "https://www.instagram.com/vaocafe.sa/" as string | null,
   studioName: null as string | null,
   studioInstagram: null as string | null,
@@ -55,6 +56,16 @@ export const menuCategories = [
     { name: "Strawberry Matcha", price: 21, image: null, description: "" },
     { name: "Hibiscus", price: 16, image: null, description: "" },
   ] },
-  // Bakes have not been supplied: keep the category without inventing products.
-  { name: "Small Bites", items: [] },
+  // Illustrative food ideas requested for the menu preview; prices remain unset until confirmed.
+  { name: "Small Bites", items: [
+    { name: "Butter Croissant", price: null, image: butterCroissant, description: "A flaky, golden pastry with a buttery finish." },
+    { name: "Cinnamon Roll", price: null, image: cinnamonRoll, description: "Soft, warmly spiced dough with a light glaze." },
+    { name: "Avocado Toast", price: null, image: avocadoToast, description: "Smashed avocado on toasted artisan bread." },
+    { name: "Almond Croissant", price: null, image: butterCroissant, description: "A crisp croissant with a delicate almond finish." },
+    { name: "Avocado & Egg Toast", price: null, image: avocadoToast, description: "Creamy avocado and egg on toasted bread." },
+    { name: "Honey Butter Croissant", price: null, image: butterCroissant, description: "A buttery croissant with a touch of honey." },
+    { name: "French Toast", price: null, image: avocadoToast, description: "Golden toast with a soft, gently sweet center." },
+    { name: "Mini Cinnamon Roll", price: null, image: cinnamonRoll, description: "A small, soft roll with cinnamon and glaze." },
+    { name: "Pastry of the Day", price: null, image: butterCroissant, description: "A freshly baked pastry selected for the day." },
+  ] },
 ];
