@@ -34,5 +34,5 @@ function Index() {
     return () => observer.disconnect();
   }, []);
 
-  return <div className="site-experience is-ready"><Header /><main><section id="home" className="hero" aria-labelledby="hero-title"><div className="hero-text"><div className="hero-copy"><h1 className="h3" id="hero-title">The art of the bake.<br />The ritual of coffee.</h1><img className="hero-logo" src="/vao-logo.svg" alt="VAO" width="458" height="190" /></div></div><HeroSlideshow /></section><EditorialGallery /><MenuSection /><TestimonialCarousel /></main><Footer /></div>;
+   return <div className="site-experience is-ready"><Header /><main><section id="home" className="hero" aria-labelledby="hero-title"><div className="hero-text"><div className="hero-copy"><h1 className="h3" id="hero-title"><span className="hero-phrase">The art of the bake.</span><br className="hero-phrase-break" /><span className="hero-phrase">The ritual of coffee.</span></h1><img className="hero-logo" src="/vao-logo.svg" alt="VAO" width="458" height="190" /></div></div><HeroSlideshow /></section><EditorialGallery /><MenuSection /><TestimonialCarousel /></main><Footer /></div>;
 }
