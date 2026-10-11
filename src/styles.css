@@ -34,6 +34,7 @@
   --card: oklch(0.994 0.008 91);
   --primary: #311000;
   --primary-foreground: #F7E9CF;
+  --menu-button-hover: #8B8672;
   --secondary: oklch(0.928 0.021 85);
   --muted: oklch(0.928 0.021 85);
   --muted-foreground: oklch(0.49 0.035 59);
@@ -94,6 +95,7 @@ p,blockquote,dt,dd { font-family: var(--font-body); font-size: var(--type-body);
 .desktop-nav { display: flex; align-items: center; gap: 52px; }
 .desktop-nav > a { font-size: var(--type-body); font-weight: var(--font-weight-body); }
 .desktop-nav > a:hover { opacity: .65; }
+.desktop-nav .vao-button:hover { background: var(--menu-button-hover); opacity: 1; }
 .desktop-nav .vao-button { height: 54px; min-width: 155px; padding: 0 20px; text-transform: none; font-size: var(--type-body); font-weight: var(--font-weight-body); }
 .hero { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); height: 100vh; height: 100svh; min-height: 0; background: var(--background); color: var(--primary); }
 .hero-text { position: relative; display: flex; align-items: stretch; padding: var(--site-padding); min-width: 0; }
@@ -210,7 +212,7 @@ p,blockquote,dt,dd { font-family: var(--font-body); font-size: var(--type-body);
   .site-experience .hero h1 { display: flex; flex-direction: column; gap: 12px; font-size: var(--type-h3); line-height: 1.15; margin-top: clamp(76px, 12vh, 110px); }
   .hero-phrase-break { display: none; }
   .hero-logo { max-width: 370px; }
-  .hero-slideshow { height: 100%; min-height: 0; }
+  .hero-slideshow { height: max(120px,25svh); min-height: 0; align-self: end; margin-inline: 20px; }
   .ritual-section { padding: var(--site-padding); }
   .ritual-heading { margin-bottom: 30px; }
   .ritual-heading .eyebrow { margin-bottom: 14px; }

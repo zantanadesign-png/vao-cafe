@@ -16,7 +16,7 @@ export function PrimaryButton({ children, href, dark = false, onClick }: { child
 }
 
 export function Header() {
-  return <header className="vao-header"><a className="symbol-link" href="#home" aria-label="VAO home"><img src="/vao-symbol.svg" alt="" width="48" height="48" /></a><nav className="desktop-nav" aria-label="Main navigation"><PrimaryButton href="#menu">View Menu</PrimaryButton></nav></header>;
+  return <header className="vao-header"><a className="symbol-link" href="#home" aria-label="VAO home"><img src="/vao-symbol.svg" alt="" width="48" height="48" /></a><nav className="desktop-nav" aria-label="Main navigation"><PrimaryButton href="#menu" dark>View Menu</PrimaryButton></nav></header>;
 }
 
 export function HeroSlideshow() {
