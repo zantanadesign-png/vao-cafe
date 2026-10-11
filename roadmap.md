@@ -1,5 +1,5 @@
 # VAO website
-- [ ] Apply and verify mobile left alignment, 50px/55px headings, separated hero phrases and consistent 20px section insets.
+- [x] Apply and verify mobile left alignment, 50px/55px headings, separated hero phrases and consistent 20px section insets.
 - [x] Establish brand design system and original café photography.
 - [x] Build hero, editorial gallery, menu, visit, testimonials, and footer.
 - [x] Verify mobile/desktop layouts, navigation, slideshow, and menu controls.
