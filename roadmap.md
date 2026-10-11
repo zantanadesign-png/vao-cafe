@@ -1,5 +1,5 @@
 # VAO website
-- [ ] Verify mobile footer order without symbol, H3 hero text and two editorial photos per column.
+- [x] Verify mobile footer order without symbol, H3 hero text and two editorial photos per column.
 - [x] Apply and verify mobile left alignment, 50px/55px headings, separated hero phrases and consistent 20px section insets.
 - [x] Establish brand design system and original café photography.
 - [x] Build hero, editorial gallery, menu, visit, testimonials, and footer.
