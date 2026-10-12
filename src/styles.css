@@ -206,13 +206,13 @@ p,blockquote,dt,dd { font-family: var(--font-body); font-size: var(--type-body);
   .footer-bottom { justify-items: start; }
   .vao-header { padding: var(--site-padding); }
   .symbol-link img { width: 42px; height: 42px; }
-  .hero { grid-template-columns: minmax(0,1fr); grid-template-rows: auto minmax(240px,50svh); height: auto; min-height: 100svh; padding: var(--site-padding); gap: 20px; }
-  .hero-text { min-height: calc(50svh - 40px); padding: 0; }
+  .hero { grid-template-columns: minmax(0,1fr); grid-template-rows: minmax(0,1fr) max(240px,50svh); height: 100svh; min-height: 0; padding: 0; gap: 20px; }
+  .hero-text { padding: var(--site-padding) var(--site-padding) 0; }
   .hero-copy { gap: 20px; }
-  .site-experience .hero h1 { display: flex; flex-direction: column; gap: 12px; font-size: var(--type-h3); line-height: 1.15; margin-top: clamp(76px, 12vh, 110px); }
+  .site-experience .hero h1 { display: flex; flex-direction: column; gap: 6px; font-size: var(--type-h3); line-height: 1.15; margin-top: clamp(76px, 12vh, 110px); }
   .hero-phrase-break { display: none; }
   .hero-logo { max-width: 370px; }
-  .hero-slideshow { height: max(120px,25svh); min-height: 0; align-self: end; margin-inline: 20px; }
+  .hero-slideshow { min-height: 0; align-self: end; margin-inline: 0; }
   .ritual-section { padding: var(--site-padding); }
   .ritual-heading { margin-bottom: 30px; }
   .ritual-heading .eyebrow { margin-bottom: 14px; }
