@@ -206,13 +206,13 @@ p,blockquote,dt,dd { font-family: var(--font-body); font-size: var(--type-body);
   .footer-bottom { justify-items: start; }
   .vao-header { padding: var(--site-padding); }
   .symbol-link img { width: 42px; height: 42px; }
-  .hero { grid-template-columns: minmax(0,1fr); grid-template-rows: minmax(0,1fr) max(240px,50svh); height: 100svh; min-height: 0; padding: 0; gap: 20px; }
+  .hero { grid-template-columns: minmax(0,1fr); grid-template-rows: minmax(0,1fr) auto; height: 100svh; min-height: 0; padding: 0; gap: 20px; }
   .hero-text { padding: var(--site-padding) var(--site-padding) 0; }
   .hero-copy { gap: 20px; }
   .site-experience .hero h1 { display: flex; flex-direction: column; gap: 6px; font-size: var(--type-h3); line-height: 1.15; margin-top: clamp(76px, 12vh, 110px); }
   .hero-phrase-break { display: none; }
-  .hero-logo { max-width: 370px; }
-  .hero-slideshow { min-height: 0; align-self: end; margin-inline: 0; }
+  .hero-logo { max-width: 370px; margin-top: 0; }
+  .hero-slideshow { min-height: 0; height: auto; width: 100%; aspect-ratio: 16 / 10; align-self: end; margin-inline: 0; }
   .ritual-section { padding: var(--site-padding); }
   .ritual-heading { margin-bottom: 30px; }
   .ritual-heading .eyebrow { margin-bottom: 14px; }
