@@ -1,4 +1,5 @@
 # VAO website
+- [ ] Complete every menu photo and equal-length caption; align the hero logo to the left inset.
 - [x] Merge the second section's intro into one running paragraph without "Made with intention", and set a 40px gap between the hero logo and the photo.
 - [x] Place the second section's phrase above the photos on mobile, directly under the title.
 - [x] Apply and verify mobile left alignment, 50px/55px headings, separated hero phrases and consistent 20px section insets.
