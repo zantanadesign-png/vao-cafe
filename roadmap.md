@@ -1,6 +1,6 @@
 # VAO website
+- [x] Merge the second section's intro into one running paragraph without "Made with intention", and set a 40px gap between the hero logo and the photo.
 - [x] Place the second section's phrase above the photos on mobile, directly under the title.
-- [x] Verify mobile footer order without symbol, H3 hero text and two editorial photos per column.
 - [x] Apply and verify mobile left alignment, 50px/55px headings, separated hero phrases and consistent 20px section insets.
 - [x] Establish brand design system and original café photography.
 - [x] Build hero, editorial gallery, menu, visit, testimonials, and footer.
