@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { ChevronLeft, ChevronRight, Plus, Minus, Star, Instagram, MapPin } from "lucide-react";
+import { ChevronLeft, ChevronRight, Plus, Minus, Instagram, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { vaoConfig, menuCategories } from "@/lib/vao-config";
 import interior from "@/assets/vao-interior.jpg";
@@ -54,16 +54,27 @@ export function MenuSection() {
   return <section ref={menuSectionRef} id="menu" className="menu-section" aria-labelledby="menu-title"><div className="menu-panel"><div className="menu-sticky-header"><span className="eyebrow">Coffee, bakes, and sweets. Made with intention, served for the moments in between.</span><h2 className="h1" id="menu-title">The Vao Menu</h2><div className="menu-tabs" role="tablist" aria-label="Menu categories">{menuCategories.map((category, index) => <Button key={category.name} id={`menu-tab-${categorySlug(category.name)}`} className={`menu-tab h3 ${active === category.name ? "is-active" : ""}`} variant="editorial" role="tab" aria-selected={active === category.name} aria-controls={`menu-category-panel-${categorySlug(category.name)}`} tabIndex={active === category.name ? 0 : -1} onClick={() => selectCategory(category.name)}>{["Hot", "Cold", "Food"][index] ?? category.name}</Button>)}</div></div>{activeCategory && <div className="menu-category-panel" role="tabpanel" id={`menu-category-panel-${categorySlug(activeCategory.name)}`} aria-labelledby={`menu-tab-${categorySlug(activeCategory.name)}`}><div className="menu-product-grid">{activeCategory.items.map(item => <article className="menu-item" key={item.name}>{item.image ? <img className="menu-product-photo" src={item.image} alt={`Illustrative café photograph for ${item.name}`} loading="lazy" width={640} height={640} /> : <div className="menu-product-photo menu-photo-pending" role="img" aria-label={`${item.name} photograph pending`}>VAO</div>}<div className="menu-product-copy"><h3 className="body-text">{item.name}</h3>{item.price != null && <p className="menu-price">{item.price} SR</p>}{item.description && <p>{item.description}</p>}</div></article>)}{activeCategory.items.length === 0 && <p className="menu-availability">Chef-crafted bakes and sweets. Menu details coming soon.</p>}</div></div>}</div></section>;
 }
 
-// Placeholder testimonials only; replace with verified guest reviews before launch.
+// English translations of the guest reviews supplied by VAO.
 const testimonials = [
-  { quote: "A considered cup of coffee and a quiet moment between the rest of the day.", name: "Coffee & ritual" },
-  { quote: "The bakes, the light, the welcome. A pause that feels like your own.", name: "Bakes & little pleasures" },
-  { quote: "Somewhere to slow down after the club, catch up, and stay a little longer.", name: "Space & connection" },
+  { quote: "I tried the Alfredo — a 10/10 ❤️. Excellent service, far beyond my expectations. I’ll definitely visit this branch again.", name: "Ahmed" },
+  { quote: "When you see a café near a gym, you might expect poor service, but Faw is completely different. They pay attention to every detail, mashallah! 🤎🤎🤎🤎🤎", name: "Ali A." },
+  { quote: "Today’s coffee was incredible! I’ve never had coffee as good as theirs. May God bless them! I also received a delicious cinnamon roll.", name: "Teif" },
+  { quote: "Mashallah! May God bless them. The pudding was absolutely perfect and served hot, and the coffee was just right. God willing, I’ll come back when it rains; I imagine the atmosphere will be amazing! 😍", name: "Amal A." },
+  { quote: "I tried their espresso and found the atmosphere and air conditioning excellent. It deserves a second visit.", name: "Meshal H." },
+  { quote: "I can confidently say this is the most luxurious and elegant café in Al Khubara. The Alfredo is excellent 👍🏻, and they have wonderful dessert options.", name: "Haya Yousef" },
+  { quote: "The banana pudding, cinnamon rolls, and cheesecake were all perfect! Especially the cheesecake — absolutely delicious, a real treat!", name: "Toto Er" },
 ];
 
 export function TestimonialCarousel() {
   const [index, setIndex] = useState(0);
-  return <section className="testimonial-section" aria-labelledby="testimonials-title"><span className="eyebrow">Coffee, bakes & a warm welcome</span><h2 className="h1" id="testimonials-title">A feeling worth returning to.</h2><div className="testimonial-card" aria-live="polite"><div className="testimonial-content" key={index}><div className="review-stars" aria-label="5 out of 5 stars">{Array.from({ length: 5 }, (_, i) => <Star key={i} size={19} strokeWidth={1.3} />)}</div><blockquote>“{testimonials[index]?.quote}”</blockquote><p className="review-name">{testimonials[index]?.name}</p><span className="sample-label">Placeholder testimonial</span></div></div><div className="carousel-controls"><Button variant="circleCoffee" aria-label="Previous testimonial" onClick={() => setIndex((index - 1 + testimonials.length) % testimonials.length)}><ChevronLeft /></Button><span className="carousel-count">0{index + 1} / 0{testimonials.length}</span><Button variant="circleCoffee" aria-label="Next testimonial" onClick={() => setIndex((index + 1) % testimonials.length)}><ChevronRight /></Button></div><div className="testimonial-gallery"><RevealImage src={interior} alt="Sunlit café tables beside tall windows" /><RevealImage src={pastry} alt="A cinnamon roll fresh from the bakery" /><RevealImage src={coffee} alt="Freshly poured coffee in a ceramic cup" /><RevealImage src={breakfast} alt="Avocado toast with a poached egg" /></div></section>;
+  useEffect(() => {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reducedMotion.matches) return;
+    const timer = window.setInterval(() => setIndex(current => (current + 1) % testimonials.length), 2000);
+    return () => window.clearInterval(timer);
+  }, []);
+
+  return <section className="testimonial-section" aria-labelledby="testimonials-title"><span className="eyebrow">Coffee, bakes & a warm welcome</span><h2 className="h1" id="testimonials-title">A feeling worth returning to.</h2><div className="testimonial-card" aria-live="off"><div className="testimonial-content" key={index}><blockquote>“{testimonials[index]?.quote}”</blockquote><p className="review-name">{testimonials[index]?.name}</p><span className="sample-label">Google review</span></div></div><div className="carousel-controls"><Button variant="circleCoffee" aria-label="Previous testimonial" onClick={() => setIndex((index - 1 + testimonials.length) % testimonials.length)}><ChevronLeft /></Button><span className="carousel-count">{String(index + 1).padStart(2, "0")} / {String(testimonials.length).padStart(2, "0")}</span><Button variant="circleCoffee" aria-label="Next testimonial" onClick={() => setIndex((index + 1) % testimonials.length)}><ChevronRight /></Button></div><div className="testimonial-gallery"><RevealImage src={interior} alt="Sunlit café tables beside tall windows" /><RevealImage src={pastry} alt="A cinnamon roll fresh from the bakery" /><RevealImage src={coffee} alt="Freshly poured coffee in a ceramic cup" /><RevealImage src={breakfast} alt="Avocado toast with a poached egg" /></div></section>;
 }
 
 export function Footer() {
