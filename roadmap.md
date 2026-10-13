@@ -1,5 +1,5 @@
 # VAO website
-- [ ] Complete every menu photo and equal-length caption; align the hero logo to the left inset.
+- [x] Complete every menu photo and equal-length caption; align the hero logo to the left inset.
 - [x] Merge the second section's intro into one running paragraph without "Made with intention", and set a 40px gap between the hero logo and the photo.
 - [x] Place the second section's phrase above the photos on mobile, directly under the title.
 - [x] Apply and verify mobile left alignment, 50px/55px headings, separated hero phrases and consistent 20px section insets.
@@ -7,6 +7,6 @@
 - [x] Build hero, editorial gallery, menu, visit, testimonials, and footer.
 - [x] Verify mobile/desktop layouts, navigation, slideshow, and menu controls.
 - [x] Update expanded menu with product photos and English descriptions in two mobile / four desktop columns; verify every category.
-- [ ] Apply supplied VAO copy, colors, verified location/hours and Instagram without redesigning.
-- [ ] Update exact supplied drinks/prices after resolving category mapping, and verify navigation/menu/carousel.
+- [x] Apply supplied VAO copy, colors, verified location/hours and Instagram without redesigning.
+- [x] Update exact supplied drinks/prices after resolving category mapping, and verify navigation/menu/carousel.
 - [ ] Replace business placeholders and sample reviews before launch — awaiting verified details and external URLs.
