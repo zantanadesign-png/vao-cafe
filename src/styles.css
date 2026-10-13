@@ -208,7 +208,7 @@ p,blockquote,dt,dd { font-family: var(--font-body); font-size: var(--type-body);
   .site-experience .hero h1 { display: flex; flex-direction: column; gap: 6px; font-size: var(--type-h3); line-height: 1.15; margin-top: clamp(56px, 8svh, 96px); }
   .hero-phrase-break { display: none; }
   .hero-logo { max-width: 370px; margin-top: auto; max-height: 18svh; object-fit: contain; object-position: left bottom; align-self: flex-start; }
-  .hero-slideshow { min-height: 0; height: auto; width: 100%; aspect-ratio: 16 / 10; max-height: 45svh; align-self: end; margin-inline: 0; }
+  .hero-slideshow { min-height: 0; height: auto; width: calc(100% - var(--site-padding) * 2); aspect-ratio: 16 / 10; max-height: 45svh; align-self: end; margin-inline: var(--site-padding); }
   .ritual-section { padding: var(--site-padding); }
   .ritual-heading { margin-bottom: 30px; }
   .ritual-heading .eyebrow { margin-bottom: 14px; }
