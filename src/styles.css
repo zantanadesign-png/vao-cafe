@@ -124,16 +124,12 @@ p,blockquote,dt,dd { font-family: var(--font-body); font-size: var(--type-body);
 .reveal-image.is-revealed img { clip-path: inset(0); transform: translateX(0); }
 .reveal-image.is-revealed:hover img { transform: scale(1.035); }
 .gallery-aside { grid-column: 1; grid-row: 1; align-self: start; }
-.editorial-number { color: var(--primary); }
-.gallery-aside p { margin-top: 18px; line-height: 1.2; }
+.gallery-aside p { line-height: 1.55; max-width: 280px; }
 .gallery-coffee { grid-column: 2; grid-row: 1 / 3; }
 .gallery-pastry { grid-column: 1; grid-row: 2 / 4; }
 .gallery-breakfast { grid-column: 3; grid-row: 2 / 4; }
 .gallery-interior { grid-column: 3; grid-row: 1; }
 .gallery-extra { grid-column: 4; grid-row: 1 / 4; }
-.gallery-copy { grid-column: 2; grid-row: 3; padding: 7px 4px 0; }
-.gallery-copy .tiny-label { color: var(--primary); }
-.gallery-copy p { line-height: 1.55; margin-top: 13px; max-width: 280px; }
 .menu-section { position: relative; min-height: 100vh; min-height: 100svh; padding: var(--site-padding); display: grid; place-items: center; background: var(--background); }
 .menu-panel { position: relative; z-index: 1; display: flex; flex-direction: column; width: min(100%,860px); min-height: calc(100svh - var(--site-padding) * 2); overflow: visible; padding: var(--site-padding); background: transparent; text-align: center; }
 .menu-panel .eyebrow { color: var(--primary); }
@@ -206,25 +202,23 @@ p,blockquote,dt,dd { font-family: var(--font-body); font-size: var(--type-body);
   .footer-bottom { justify-items: start; }
   .vao-header { padding: var(--site-padding); }
   .symbol-link img { width: 42px; height: 42px; }
-  .hero { grid-template-columns: minmax(0,1fr); grid-template-rows: minmax(0,1fr) auto; height: 100svh; min-height: 0; padding: 0; gap: 20px; }
-  .hero-text { padding: var(--site-padding) var(--site-padding) 0; }
+  .hero { grid-template-columns: minmax(0,1fr); grid-template-rows: minmax(0,1fr) auto; height: 100svh; min-height: 0; padding: 0; gap: 40px; }
+  .hero-text { padding: var(--site-padding) var(--site-padding) 0; min-height: 0; overflow: hidden; }
   .hero-copy { gap: 20px; }
-  .site-experience .hero h1 { display: flex; flex-direction: column; gap: 6px; font-size: var(--type-h3); line-height: 1.15; margin-top: clamp(76px, 12vh, 110px); }
+  .site-experience .hero h1 { display: flex; flex-direction: column; gap: 6px; font-size: var(--type-h3); line-height: 1.15; margin-top: clamp(56px, 8svh, 96px); }
   .hero-phrase-break { display: none; }
-  .hero-logo { max-width: 370px; margin-top: 0; }
-  .hero-slideshow { min-height: 0; height: auto; width: 100%; aspect-ratio: 16 / 10; align-self: end; margin-inline: 0; }
+  .hero-logo { max-width: 370px; margin-top: auto; max-height: 18svh; object-fit: contain; }
+  .hero-slideshow { min-height: 0; height: auto; width: 100%; aspect-ratio: 16 / 10; max-height: 45svh; align-self: end; margin-inline: 0; }
   .ritual-section { padding: var(--site-padding); }
   .ritual-heading { margin-bottom: 30px; }
   .ritual-heading .eyebrow { margin-bottom: 14px; }
-  .editorial-gallery { grid-template-columns: minmax(0,1fr) minmax(0,1fr); grid-template-rows: auto auto repeat(2,180px); gap: 12px; }
-  .gallery-aside { grid-column: 1 / -1; grid-row: 1; padding-right: 0; }
-  .gallery-aside p { margin-top: 15px; }
-  .gallery-copy { grid-column: 1 / -1; grid-row: 2; padding: 0 0 10px; }
-  .gallery-copy p { line-height: 1.6; margin-top: 12px; max-width: none; }
-  .gallery-coffee { grid-column: 1; grid-row: 3; }
-  .gallery-extra { grid-column: 2; grid-row: 3; }
-  .gallery-pastry { grid-column: 1; grid-row: 4; }
-  .gallery-breakfast { grid-column: 2; grid-row: 4; }
+  .editorial-gallery { grid-template-columns: minmax(0,1fr) minmax(0,1fr); grid-template-rows: auto repeat(2,180px); gap: 12px; }
+  .gallery-aside { grid-column: 1 / -1; grid-row: 1; padding: 0; }
+  .gallery-aside p { line-height: 1.6; max-width: none; }
+  .gallery-coffee { grid-column: 1; grid-row: 2; }
+  .gallery-extra { grid-column: 2; grid-row: 2; }
+  .gallery-pastry { grid-column: 1; grid-row: 3; }
+  .gallery-breakfast { grid-column: 2; grid-row: 3; }
   .gallery-interior { display: none; }
   .menu-section { padding: var(--site-padding); }
   .menu-panel { padding: 0; }
