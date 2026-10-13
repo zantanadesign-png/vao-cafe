@@ -11,6 +11,9 @@ import espressoTonic from "@/assets/vao-menu-espresso-tonic.jpg";
 import butterCroissant from "@/assets/vao-menu-butter-croissant.jpg";
 import cinnamonRoll from "@/assets/vao-menu-cinnamon-roll.jpg";
 import avocadoToast from "@/assets/vao-menu-avocado-toast.jpg";
+import matcha from "@/assets/vao-menu-matcha.jpg";
+import strawberryMatcha from "@/assets/vao-menu-strawberry-matcha.jpg";
+import hibiscus from "@/assets/vao-menu-hibiscus.jpg";
 
 // Replace null values with VAO's verified business information before launch.
 export const vaoConfig = {
@@ -52,9 +55,9 @@ export const menuCategories = [
     { name: "V60", price: 17, image: coldBrew, description: "" },
     { name: "Infusion V60", price: 20, image: coldBrew, description: "" },
     { name: "Coffee of the Day", price: 10, image: coldBrew, description: "" },
-    { name: "Matcha", price: 19, image: null, description: "" },
-    { name: "Strawberry Matcha", price: 21, image: null, description: "" },
-    { name: "Hibiscus", price: 16, image: null, description: "" },
+    { name: "Matcha", price: 19, image: matcha, description: "" },
+    { name: "Strawberry Matcha", price: 21, image: strawberryMatcha, description: "" },
+    { name: "Hibiscus", price: 16, image: hibiscus, description: "" },
   ] },
   // Illustrative food ideas requested for the menu preview; prices remain unset until confirmed.
   { name: "Small Bites", items: [
