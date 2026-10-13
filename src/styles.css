@@ -106,10 +106,14 @@ p,blockquote,dt,dd { font-family: var(--font-body); font-size: var(--type-body);
 .hero-slideshow { position: relative; overflow: hidden; height: 100%; }
 .hero-slides { position: absolute; inset: 0; }
 .hero-slide { position: absolute; width: 100%; height: 100%; object-fit: cover; }
-.hero-slide.incoming { animation: slide-in 1200ms cubic-bezier(.76,0,.24,1) both; }
-.hero-slide.outgoing { animation: slide-out 1200ms cubic-bezier(.76,0,.24,1) both; }
-@keyframes slide-in { from { transform: translateY(100%); } to { transform: translateY(0); } }
-@keyframes slide-out { from { transform: translateY(0); } to { transform: translateY(-100%); } }
+.hero-slide.incoming-up { animation: slide-in-up 1200ms cubic-bezier(.76,0,.24,1) both; }
+.hero-slide.outgoing-up { animation: slide-out-up 1200ms cubic-bezier(.76,0,.24,1) both; }
+.hero-slide.incoming-right { animation: slide-in-right 1200ms cubic-bezier(.76,0,.24,1) both; }
+.hero-slide.outgoing-right { animation: slide-out-right 1200ms cubic-bezier(.76,0,.24,1) both; }
+@keyframes slide-in-up { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@keyframes slide-out-up { from { transform: translateY(0); } to { transform: translateY(-100%); } }
+@keyframes slide-in-right { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes slide-out-right { from { transform: translateX(0); } to { transform: translateX(100%); } }
 .hero-slideshow::after { content: ''; position: absolute; inset: 0; background: var(--photo-shade); pointer-events: none; }
 .ritual-section { padding: var(--site-padding); background: var(--background); color: var(--primary); }
 .ritual-heading { text-align: center; margin-bottom: 53px; }
