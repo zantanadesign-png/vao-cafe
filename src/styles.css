@@ -224,7 +224,7 @@ p,blockquote,dt,dd { font-family: var(--font-body); font-size: var(--type-body);
   .hero-copy { gap: 20px; }
   .site-experience .hero h1 { display: flex; flex-direction: column; gap: 6px; font-size: var(--type-h3); line-height: 37px; margin-top: 82px; }
   .hero-phrase-break { display: none; }
-  .hero-logo { max-width: 370px; margin-top: auto; max-height: 18svh; object-fit: contain; object-position: left bottom; align-self: flex-start; }
+  .hero-logo { width: 100%; max-width: none; height: auto; margin-top: auto; max-height: 18svh; object-fit: contain; object-position: left bottom; align-self: stretch; }
   .hero-slideshow { min-height: 0; height: auto; width: calc(100% - var(--site-padding) * 2); aspect-ratio: 16 / 10; max-height: 45svh; align-self: end; margin-inline: var(--site-padding); }
   .ritual-section { padding: 40px var(--site-padding) 20px; }
   .ritual-heading { margin-bottom: 30px; }

@@ -59,16 +59,16 @@ export const menuCategories = [
     { name: "Strawberry Matcha", price: 21, image: strawberryMatcha, description: "Iced strawberry matcha with berries." },
     { name: "Hibiscus", price: 16, image: hibiscus, description: "Chilled hibiscus with floral flavor." },
   ] },
-  // Illustrative food ideas requested for the menu preview; prices remain unset until confirmed.
-  { name: "Small Bites", items: [
-    { name: "Butter Croissant", price: null, image: butterCroissant, description: "Croissant, crisp and buttery inside." },
-    { name: "Cinnamon Roll", price: null, image: cinnamonRoll, description: "Soft cinnamon roll with sweet glaze." },
-    { name: "Avocado Toast", price: null, image: avocadoToast, description: "Ripe avocado atop toasted sourdough." },
-    { name: "Almond Croissant", price: null, image: butterCroissant, description: "Croissant with almond cream filling." },
-    { name: "Avocado & Egg Toast", price: null, image: avocadoToast, description: "Avocado egg toast, fresh and savory." },
-    { name: "Honey Butter Croissant", price: null, image: butterCroissant, description: "Buttery croissant with honey inside." },
-    { name: "French Toast", price: null, image: avocadoToast, description: "French toast, golden, soft and warm." },
-    { name: "Mini Cinnamon Roll", price: null, image: cinnamonRoll, description: "Mini cinnamon roll with sweet glaze." },
-    { name: "Pastry of the Day", price: null, image: butterCroissant, description: "Fresh pastry chosen and baked daily." },
+  // Menu photography is bundled with each item; use concise, consistently sized captions.
+  { name: "Food", items: [
+    { name: "Date Cake", price: 20, image: cinnamonRoll, description: "Dates, pecans, baked fresh each day." },
+    { name: "VAO Cheesecake", price: 22, image: butterCroissant, description: "Rich cheesecake with a cream finish." },
+    { name: "Tiramisu", price: 22, image: cinnamonRoll, description: "Tiramisu, coffee sauce & cocoa dust." },
+    { name: "Chocolate Cake", price: 18, image: cinnamonRoll, description: "Chocolate cake with crisp top layer." },
+    { name: "Oat Fit", price: 16, image: avocadoToast, description: "Oats with granola & chocolate daily." },
+    { name: "Banana Pudding", price: 18, image: cinnamonRoll, description: "Banana pudding with biscuits, cream." },
+    { name: "Power Bites", price: 9, image: butterCroissant, description: "Oat bites, coated in dark chocolate." },
+    { name: "Classic Babka", price: 18, image: cinnamonRoll, description: "Soft babka with cocoa filling daily." },
+    { name: "Coconut Bites", price: 10, image: avocadoToast, description: "Coconut bites with gentle sweetness." },
   ] },
 ];
