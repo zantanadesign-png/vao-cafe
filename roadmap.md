@@ -9,4 +9,5 @@
 - [x] Update expanded menu with product photos and English descriptions in two mobile / four desktop columns; verify every category.
 - [x] Apply supplied VAO copy, colors, verified location/hours and Instagram without redesigning.
 - [x] Update exact supplied drinks/prices after resolving category mapping, and verify navigation/menu/carousel.
+- [x] Standardize menu names and testimonials, set hero rotation to 2.5s, and normalize section spacing.
 - [ ] Replace business placeholders and sample reviews before launch — awaiting verified details and external URLs.
