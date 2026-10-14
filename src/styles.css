@@ -202,11 +202,13 @@ p,blockquote,dt,dd { font-family: var(--font-body); font-size: var(--type-body);
 .site-experience main > section:not(.hero) { padding-block: 20px; }
 @media(min-width:768px) and (max-width:1100px) { .hero-text { padding: var(--site-padding); } .desktop-nav { gap: 30px; } }
 @media(min-width:768px) {
-  .site-experience main > .menu-section { padding-block: 20px; }
+  .site-experience main > section:not(.hero) { padding-block: 40px; }
+  .site-experience main > section.ritual-section:not(.hero) { padding-block: 80px 40px; }
+  .site-experience main > .menu-section { padding-block: 40px; }
   .site-experience main > .menu-section > .menu-panel { min-height: auto; padding-block: 0; }
-  .site-experience main > .menu-section .menu-sticky-header { top: 0; margin-block-start: -20px; padding-block-start: 20px; }
+  .site-experience main > .menu-section .menu-sticky-header { top: 0; margin-block-start: -40px; padding-block-start: 40px; }
   .site-experience main > .menu-section .menu-product-grid { padding-bottom: 0; }
-  .vao-footer { padding-block: 20px; }
+  .testimonial-gallery-section,.vao-footer { padding-block: 40px; }
 }
 @media(max-width:767px) {
   .site-experience { --site-padding: 20px; --type-h1: 50px; --type-h3: 33px; text-align: left; }
